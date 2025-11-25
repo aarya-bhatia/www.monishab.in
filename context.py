@@ -64,10 +64,6 @@ consultations = [
         "value": "4000 INR per Palm reading (108 USD)"
     },
     {
-        "title": "",
-        "value": "4000 INR per Palm reading (108 USD)"
-    },
-    {
         "title": "Name Correction",
         "value": "4000 INR for Native (108 USD)"
     },
