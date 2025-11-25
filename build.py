@@ -1,6 +1,7 @@
 import os
 from jinja2 import Environment, FileSystemLoader
 import shutil
+from context import services, testimonials, consultations
 
 TEMPLATE_DIR = "templates"
 OUTPUT_DIR = "docs"
@@ -13,7 +14,8 @@ pages = [
     {
         "template": "index.html",
         "output": "index.html",
-        "title": "Home"
+        "title": "Home",
+        "context": {"services": services, "testimonials": testimonials, "consultations": consultations}
     }
 ]
 
@@ -26,6 +28,7 @@ for page in pages:
         template = env.get_template(page["template"])
         output_html = template.render(
             title=page["title"],
+            **page["context"]
         )
 
         with open(os.path.join(OUTPUT_DIR, page["output"]), "w") as f:
