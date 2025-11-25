@@ -3,12 +3,11 @@ from jinja2 import Environment, FileSystemLoader
 import shutil
 
 TEMPLATE_DIR = "templates"
-OUTPUT_DIR = "public"
+OUTPUT_DIR = "docs"
 STATIC_DIR = "static"
 
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 env.globals["static"] = STATIC_DIR
-
 
 pages = [
     {
@@ -18,7 +17,7 @@ pages = [
     }
 ]
 
-os.makedirs("public", exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 for page in pages:
     print(f"Building template {page["template"]}")
