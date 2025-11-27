@@ -4,61 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Aarya Bhatia">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="static/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/icon/favicon-16x16.png">
+    <link rel="manifest" href="static/icon/site.webmanifest">
 </head>
 
 <body>
     
 
-<div class=container>
-    <header>
-        <div class="display-1 fw-bold text-center">
-            <a class="text-body text-decoration-none" href=/ />Monisha Bhatia</a>
-        </div>
-        <div class="lead text-center">India-based Healer, Clairvoyant and Psychic</div>
-
-        <nav aria-label=Menu class="m-3">
-            <ul class="align-items-center justify-content-center nav">
-                <li class=nav-item>
-                    <a aria-current=page class="fw-bold text-body nav-link text-decoration-underline"
-                        href="#about" />About</a>
+<nav class="navbar navbar-expand-md sticky-top bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Monisha Bhatia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class=nav-item>
-                    <a aria-current=page class="fw-bold text-body nav-link text-decoration-underline"
-                        href="#services" />Services</a>
+                    <a class="nav-link" href="#about" />About</a>
                 </li>
                 <li class=nav-item>
-                    <a aria-current=page class="fw-bold text-body nav-link text-decoration-underline"
-                        href="#testimonials" />Testimonials</a>
+                    <a class="nav-link" href="#services" />Services</a>
                 </li>
                 <li class=nav-item>
-                    <a aria-current=page class="fw-bold text-body nav-link text-decoration-underline"
-                        href="#consultation" />Consulation</a>
+                    <a class="nav-link" href="#testimonials" />Testimonials</a>
+                </li>
+                <li class=nav-item>
+                    <a class="nav-link" href="#consultation" />Consulation</a>
                 </li>
             </ul>
-        </nav>
-
-        <div class="text-center">
-            <p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                </svg>
-                Mobile: +91-9711131550
-            </p>
-            <p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                </svg>
-                Email: <a href="mailto:monishabhatia17@gmail.com">monishabhatia17@gmail.com</a>
-            </p>
         </div>
+    </div>
+</nav>
+
+<main class="container pt-4">
+    <header>
+        <div class="display-1 fw-bold text-center">
+            <a class="text-body text-decoration-none" href=/ />Dr. Monisha Bhatia</a>
+        </div>
+        <div class="lead text-center">India-based Healer, Clairvoyant and Psychic</div>
     </header>
+
+    <div class="text-center pt-4">
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+            </svg>
+            <strong>Mobile</strong>: +91-9711131550
+        </p>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <path
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            </svg>
+            <strong>Email</strong>: <a href="mailto:monishabhatia17@gmail.com">monishabhatia17@gmail.com</a>
+        </p>
+    </div>
 
     <article class="align-items-center d-flex flex-column border-bottom p-4" id="home">
         <img src="static/monisha-bhatia_hp.jpg" class="img-fluid" width="400" />
@@ -195,7 +212,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card mb-4">
                     
-                    <img src="static/tarot-cards.png" class="card-img-top" alt="picture">
+                    <img src="static/tarot-cards.png" class="card-img-top" alt="picture" height="200">
                     
                     <div class="card-body">
                         <h5 class="card-title">Tarot Card</h5>
@@ -215,7 +232,7 @@ settling abroad, etc.
             <div class="col-md-6 col-lg-4">
                 <div class="card mb-4">
                     
-                    <img src="static/numerology.jpeg" class="card-img-top" alt="picture">
+                    <img src="static/numerology.jpeg" class="card-img-top" alt="picture" height="200">
                     
                     <div class="card-body">
                         <h5 class="card-title">Numerology</h5>
@@ -235,7 +252,7 @@ settling abroad, etc.
             <div class="col-md-6 col-lg-4">
                 <div class="card mb-4">
                     
-                    <img src="static/astrology.jpeg" class="card-img-top" alt="picture">
+                    <img src="static/astrology.jpeg" class="card-img-top" alt="picture" height="200">
                     
                     <div class="card-body">
                         <h5 class="card-title">Astrology</h5>
@@ -256,7 +273,7 @@ settling abroad, etc.
             <div class="col-md-6 col-lg-4">
                 <div class="card mb-4">
                     
-                    <img src="static/palmistry.png" class="card-img-top" alt="picture">
+                    <img src="static/palmistry.png" class="card-img-top" alt="picture" height="200">
                     
                     <div class="card-body">
                         <h5 class="card-title">Palmistry</h5>
@@ -275,7 +292,7 @@ settling abroad, etc.
             <div class="col-md-6 col-lg-4">
                 <div class="card mb-4">
                     
-                    <img src="static/reiki-healing.png" class="card-img-top" alt="picture">
+                    <img src="static/reiki-healing.png" class="card-img-top" alt="picture" height="200">
                     
                     <div class="card-body">
                         <h5 class="card-title">Reiki Healing</h5>
@@ -573,7 +590,7 @@ Apart from this, she is very intelligent, analytical and possesses an energetic 
             
         </div>
     </article>
-</div>
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
     integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
