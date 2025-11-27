@@ -28,7 +28,8 @@ def GET_about():
 @app.get("/testimonials")
 def GET_testimonials():
     db = TinyDB('data/testimonials.json')
-    testimonials = db.all()
+    Review = Query()
+    testimonials = db.search(Review.status == "active")
     return render_template("testimonials.html", testimonials=testimonials)
 
 
@@ -43,6 +44,6 @@ def POST_write_review():
     review_text = request.form["ReviewText"]
     db = TinyDB('data/testimonials.json')
     db.insert({"author": name, "message": review_text,
-              "timestamp": datetime.now().isoformat()})
+              "status": "pending", "timestamp": datetime.now().isoformat()})
     print(name, review_text)
     return render_template("server_message.html", message="Thank You! Your review has been submitted.")
