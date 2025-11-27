@@ -1,7 +1,7 @@
 import os
 from jinja2 import Environment, FileSystemLoader
 import shutil
-from context import services, testimonials, consultations
+from data.services import services, testimonials, consultations
 
 TEMPLATE_DIR = "templates"
 OUTPUT_DIR = "docs"

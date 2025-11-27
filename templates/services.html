@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+{% block content %}
+
+{% include "_navbar.html" %}
+
+<main class="container pt-4">
+    <article class="mb-4 border-bottom" id="services">
+        <h1 class="display-4 my-4 text-center">Services</h1>
+
+        <div class="row">
+            {% for service in services %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card mb-4">
+                    {% if 'image' in service %}
+                    <img src="{{ service['image'] }}" class="card-img-top" alt="picture" height="200">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ service["name"] }}</h5>
+                        <p class="card-text">
+                            {{ service["description"] }}
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+
+</main>
+
+{% endblock %}

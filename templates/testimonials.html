@@ -1,0 +1,46 @@
+{% extends "_base.html" %}
+{% block content %}
+
+{% include "_navbar.html" %}
+
+<main class="container pt-4">
+    <article class="mb-4 border-bottom" id="testimonials">
+        <h1 class="display-4 my-4 text-center">Testimonials</h1>
+
+        <form action="/write-review" method="POST" class="mb-4">
+            <h5>Write a review...</h5>
+            <div class="form-group mb-2">
+                <label for="Name">Name</label>
+                <input class="form-control" type="text" id="Name" name="Name" required />
+            </div>
+            <div class="form-group mb-2">
+                <label for="ReviewText">Review</label>
+                <textarea class="form-control" id="ReviewText" name="ReviewText" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+
+        <div class="row" data-masonry='{"percentPosition": true }'>
+            {% for testimonial in testimonials %}
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card mb-4 rounded">
+                    <p class="card-header">{{testimonial["author"]}}</p>
+                    <!-- {% if testimonial["timestamp"] %}
+                    <p class="card-text text-muted">{{testimonial["timestamp"]}}</p>
+                    {% endif %} -->
+                    <div class="card-body p-4">
+                        <p class="card-text">{{testimonial["message"]}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+
+</main>
+
+{% endblock %}

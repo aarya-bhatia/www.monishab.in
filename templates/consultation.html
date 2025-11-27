@@ -1,0 +1,65 @@
+{% extends "_base.html" %}
+{% block content %}
+
+{% include "_navbar.html" %}
+
+<main class="container pt-4">
+    <article class="mb-4 border-bottom" id="consultation">
+        <h1 class="display-4 my-4 text-center">Consulation</h1>
+        <h2>FAQs</h2>
+        <ul>
+            <li>For abroad based consultations, transactions and conversion charges apply accordingly</li>
+            <li>Prior deposit of fee is mandatory before consultation</li>
+            <li>Up to 10 name-correction suggestions provided in two installments of 5 each.</li>
+            <li>Reiki classes are conducted in person in Gurgaon (Delhi NCR), as attunement requires physical presence.
+            </li>
+            <li>Reiki teaching is offered in small group cohorts of 3–6 participants.</li>
+            <li>Online hypnotherapy sessions are available, with the option of using a surrogate when required.</li>
+        </ul>
+
+
+        <h2>Fees</h2>
+        <ul>
+            {% for consultation in consultations %}
+            <li><strong>{{ consultation["title"] }}</strong> - {{ consultation["value"] }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Payment Methods</h2>
+        <ul>
+            <li>
+                <div>
+                    <strong>Bank Transfer</strong>
+                    <ul>
+                        <li>Beneficiary: Monisha Bhatia</li>
+                        <li>Account Number: 5001738242</li>
+                        <li>Branch Name: Axis Bank, Ground Floor, DLF Square, M Block, Jacaranda Marg, DLF City, Phase
+                            II, Gurgaon –
+                            122002</li>
+                        <li>IFSC: UTIB0005152</li>
+                        <li>SWIFT Code: AXISINBB (For International Payments)</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <strong>Pay through PayPal</strong>
+                <ul>
+                    <li>
+                        Paypal ID: monishabhatia17@gmail.com
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Pay through UPI (Paytm/PayZ/Google Pay/etc.)</strong>
+                <ul>
+                    <li>
+                        UPI Number: +91-9711131550
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
+</main>
+
+{% endblock %}
